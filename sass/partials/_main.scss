@@ -271,7 +271,7 @@ header {
 
 .image_block {
     @include rem-calc(height, 50);
-    background: transparent image-url("lovers_stare.jpg") center top no-repeat;
+    background: transparent url("../img/lovers_stare.jpg") center top no-repeat;
     background-size: auto 37.5em;
     color: #FFF;
 
@@ -293,16 +293,16 @@ header {
     }
 
     &.banner_two {
-        background-image: image-url("lovers_location.jpg");
+        background-image: url("../img/lovers_location.jpg");
     }
     &.banner_three {
-        background-image: image-url("lovers_walk.jpg");
+        background-image: url("../img/lovers_walk.jpg");
     }
     &.banner_four {
-        background-image: image-url("lovers_hands.jpg");
+        background-image: url("../img/lovers_hands.jpg");
     }
     &.banner_five {
-        background-image: image-url("lovers_nose.jpg");
+        background-image: url("../img/lovers_nose.jpg");
     }
 
 	@include breakpoint(medium-large) {
@@ -490,12 +490,12 @@ header {
 footer {
     @include rem-calc(margin-top, 2.5);
     @include rem-calc(padding-top, 4.5);
-    background: transparent image-url("bg_skyline_small.png") center top no-repeat;
+    background: transparent url("../img/bg_skyline_small.png") center top no-repeat;
     text-align: center;
 
     @include breakpoint(small) {
         @include rem-calc(padding-top, 9.5);
-        background-image: image-url("bg_skyline.png");
+        background-image: url("../img/bg_skyline.png");
     }
 
     p {
