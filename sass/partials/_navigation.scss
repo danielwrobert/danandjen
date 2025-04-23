@@ -1,7 +1,3 @@
-@use 'sass:color';
-@use 'mixins' as *;
-@use 'variables' as *;
-
 /* ==========================================================================
    Navigation Styles
    ========================================================================== */
@@ -18,8 +14,8 @@ nav[role="navigation"] {
     .menu {
         @include rem-calc(padding, 0.8, 1.5, 0.5);
         @include rem-calc(font-size, 2);
-        display: inline-block;
-        background: color.adjust($blue, $lightness: -10%);
+        @include inline-block();
+        background: darken($blue, 10%);
         border-radius: 5px;
         color: $peach;
         font-family: $header_font;
@@ -44,7 +40,7 @@ nav[role="navigation"] {
                 border-radius: 5px;
                 cursor: pointer;
 
-                &:hover { background: color.adjust($peach, $lightness: -5%); }
+                &:hover { background: darken($peach, 5%); }
 
                 a { color: $blue; }
             }
@@ -52,7 +48,7 @@ nav[role="navigation"] {
             a {
                 @include rem-calc(font-size, 1.8);
                 @include rem-calc(letter-spacing, 0.1);
-                display: inline-block;
+                @include inline-block();
                 width: 100%; height: 100%;
                 color: $peach;
                 font-family: $header_font;
@@ -76,7 +72,7 @@ nav[role="navigation"] {
       
             li {
                 @include rem-calc(margin, 0, 2.5, 0, 0);
-                display: inline-block;
+                @include inline-block();
                 padding: 0;
         
                 &:last-of-type {
