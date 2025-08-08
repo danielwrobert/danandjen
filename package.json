@@ -4,11 +4,13 @@
 	"description": "Dan and Jen's Wedding Website",
 	"scripts": {
 		"sass": "sass sass:css --style compressed --watch",
-		"sass:build": "sass sass:css --style compressed",
-		"clean": "rimraf css/*.map",
-		"build": "npm run clean && npm run sass:build"
+		"sass:build": "sass sass:build/css --style compressed",
+		"clean": "rimraf build && rimraf css/*.map",
+		"copy": "copyfiles -u 0 \"img/**/*\" \"fonts/**/*\" \"css/styles.css\" \"js/**/*\" \"index.html\" build/",
+		"build": "npm run clean && mkdir -p build && npm run copy && npm run sass:build"
 	},
 	"devDependencies": {
+		"copyfiles": "^2.4.1",
 		"rimraf": "^5.0.5",
 		"sass": "^1.71.1"
 	}
